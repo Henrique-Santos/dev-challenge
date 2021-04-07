@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Pedidos de Venda</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let salesOrder of salesOrders">
+    
+          <tr>
+            <th class="id-style" scope="row">#{{ salesOrder.SalesOrderID }}</th>
+            <td>{{ salesOrder.MaterialName }}</td>
+            <td>Qtd: {{ salesOrder.Quantity }} pç</td>
+          </tr>
+    
+        </tbody>
+    </table>
+</div>
+
+<hr>

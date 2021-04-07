@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Mão de obra</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let workforce of workforces">
+    
+          <tr>
+            <th class="id-style" scope="row">#{{ workforce.WorkforceID }}</th>
+            <td>{{ workforce.Name }}</td>
+            <td>{{ workforce.Shift }}</td>
+          </tr>
+    
+        </tbody>
+    </table>
+</div>
+
+<hr>
