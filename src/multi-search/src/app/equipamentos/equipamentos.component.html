@@ -1,19 +1,18 @@
 <div class="container">
-    <table class="table table-borderless">
-        <thead aria-colspan="4" class="thead-light">
-          <tr>
-            <th scope="col">Equipamentos</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let equipment of equipments">
-    
-          <tr>
-            <th class="id-style" scope="row">#{{ equipment.EquipmentID }}</th>
-            <td colspan="3">{{ equipment.EquipmentName }}</td>
-          </tr>
-    
-        </tbody>
-    </table>
+  <table class="table table-borderless">
+    <thead class="border">
+      <tr>
+        <th colspan="1" scope="col">Equipamentos</th>
+        <td colspan="3" class="found-item">({{ equipments.length }} itens)</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let equipment of equipments | filtrarEquipamentos: equipmentsSearch">
+      <tr>
+        <th class="id-style" scope="row">#{{ equipment.EquipmentID }}</th>
+        <td colspan="3">{{ equipment.EquipmentName }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <hr>

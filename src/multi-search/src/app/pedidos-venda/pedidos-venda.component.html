@@ -1,20 +1,32 @@
+<app-pesquisa
+  (onTyping)="salesOrdersSearch = $event"
+>
+</app-pesquisa>
+
 <div class="container">
-    <table class="table table-borderless">
-        <thead>
-          <tr>
-            <th scope="col">Pedidos de Venda</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let salesOrder of salesOrders">
-    
-          <tr>
-            <th class="id-style" scope="row">#{{ salesOrder.SalesOrderID }}</th>
-            <td>{{ salesOrder.MaterialName }}</td>
-            <td>Qtd: {{ salesOrder.Quantity }} pç</td>
-          </tr>
-    
-        </tbody>
-    </table>
+  <table class="table table-borderless">
+    <thead class="border">
+      <tr>
+        <th colspan="1" scope="col">Pedidos de Venda</th>
+        <td colspan="3" class="found-item">({{ salesOrders.length }} itens)</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let salesOrder of salesOrders | filtrarPedidosVenda: salesOrdersSearch">
+      <tr>
+        <th class="id-style" scope="row">#{{ salesOrder.SalesOrderID }}</th>
+        <td>{{ salesOrder.MaterialName }}</td>
+        <td>Qtd: {{ salesOrder.Quantity }} pç</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <hr>
+
+<app-pedidos-compra [purchaseOrdersSearch]="salesOrdersSearch" ></app-pedidos-compra>
+
+<app-materiais [materialsSearch]="salesOrdersSearch"></app-materiais>
+
+<app-equipamentos [equipmentsSearch]="salesOrdersSearch"></app-equipamentos>
+
+<app-mao-de-obra [workforcesSearch]="salesOrdersSearch"></app-mao-de-obra>

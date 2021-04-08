@@ -5,8 +5,9 @@
             type="search"
             placeholder="Pesquise..."
             autofocus
-            (keyup)="debounce.next($event.target.value)"
+            (input) = "debounce.next($event.target.value)"
             [value]="value"
         >
     </form>
 </div>
+

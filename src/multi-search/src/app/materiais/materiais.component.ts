@@ -1,5 +1,6 @@
+import { Component, Input, OnInit } from '@angular/core';
+
 import { MateriaisService } from './materiais.service';
-import { Component, OnInit } from '@angular/core';
 import { Materiais } from './materiais';
 
 @Component({
@@ -10,6 +11,7 @@ import { Materiais } from './materiais';
 export class MateriaisComponent implements OnInit {
 
   materials: Materiais[] = []
+  @Input() materialsSearch: string = ''
 
   constructor(private materiaisService: MateriaisService) { }
 

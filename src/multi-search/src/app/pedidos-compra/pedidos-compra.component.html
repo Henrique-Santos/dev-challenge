@@ -1,20 +1,19 @@
 <div class="container">
-    <table class="table table-borderless">
-        <thead>
-          <tr>
-            <th scope="col">Pedidos de Compra</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let purchaseOrder of purchaseOrders">
-    
-          <tr>
-            <th class="id-style" scope="row">#{{ purchaseOrder.PurchaseOrderID }}</th>
-            <td>{{ purchaseOrder.MaterialName }}</td>
-            <td>Qtd: {{ purchaseOrder.Quantity }} pç</td>
-          </tr>
-    
-        </tbody>
-    </table>
+  <table class="table table-borderless">
+    <thead class="border">
+      <tr>
+        <th colspan="1" scope="col">Pedidos de Compra</th>
+        <td colspan="3" class="found-item">({{ purchaseOrders.length }} itens)</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let purchaseOrder of purchaseOrders | filtrarPedidosVenda: purchaseOrdersSearch">
+      <tr>
+        <th class="id-style" scope="row">#{{ purchaseOrder.PurchaseOrderID }}</th>
+        <td>{{ purchaseOrder.MaterialName }}</td>
+        <td>Qtd: {{ purchaseOrder.Quantity }} pç</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <hr>

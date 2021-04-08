@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Equipamentos } from './equipamentos';
 import { EquipamentosService } from './equipamentos.service';
@@ -11,6 +11,7 @@ import { EquipamentosService } from './equipamentos.service';
 export class EquipamentosComponent implements OnInit {
 
   equipments: Equipamentos[] = []
+  @Input() equipmentsSearch: string = ''
 
   constructor(private equipamentosService: EquipamentosService) { }
 

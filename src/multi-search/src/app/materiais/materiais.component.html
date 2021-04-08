@@ -1,19 +1,18 @@
 <div class="container">
-    <table class="table table-borderless">
-        <thead>
-          <tr>
-            <th scope="col">Produtos</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let material of materials">
-    
-          <tr>
-            <th class="id-style" scope="row">#{{ material.MaterialID }}</th>
-            <td colspan="3">{{ material.MaterialName }}</td>
-          </tr>
-    
-        </tbody>
-    </table>
+  <table class="table table-borderless">
+    <thead class="border">
+      <tr>
+        <th colspan="1" scope="col">Produtos</th>
+        <td colspan="3" class="found-item">({{ materials.length }} itens)</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let material of materials | filtrarMateriais: materialsSearch">
+      <tr>
+        <th class="id-style" scope="row">#{{ material.MaterialID }}</th>
+        <td colspan="3">{{ material.MaterialName }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <hr>

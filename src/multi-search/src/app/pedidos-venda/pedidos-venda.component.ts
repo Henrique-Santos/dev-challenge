@@ -11,6 +11,7 @@ import { PedidosVenda } from './pedidos-venda';
 export class PedidosVendaComponent implements OnInit {
 
   salesOrders: PedidosVenda[] = []
+  salesOrdersSearch: string = ''
 
   constructor(private pedidosVendaService: PedidosVendaService) { }
 

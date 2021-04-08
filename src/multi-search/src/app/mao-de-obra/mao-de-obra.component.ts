@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { MaoDeObra } from './mao-de-obra';
 import { MaoDeObraService } from './mao-de-obra.service';
@@ -11,6 +11,7 @@ import { MaoDeObraService } from './mao-de-obra.service';
 export class MaoDeObraComponent implements OnInit {
 
   workforces: MaoDeObra[] = []
+  @Input() workforcesSearch: string = ''
 
   constructor(private maoDeObraService: MaoDeObraService) { }
 

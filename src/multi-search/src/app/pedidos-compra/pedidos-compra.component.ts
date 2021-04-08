@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { PedidosCompra } from './pedidos-compra';
 import { PedidosCompraService } from './pedidos-compra.service';
@@ -11,6 +11,7 @@ import { PedidosCompraService } from './pedidos-compra.service';
 export class PedidosCompraComponent implements OnInit {
 
   purchaseOrders: PedidosCompra[] = []
+  @Input() purchaseOrdersSearch: string = ''
 
   constructor(private pedidosCompraService: PedidosCompraService) { }
 
