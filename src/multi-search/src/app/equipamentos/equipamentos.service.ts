@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Equipamentos } from './equipamentos';
 
-const URL = 'http://localhost:3001/equipments'
+const URL = 'http://localhost:3002/equipments'
 
 @Injectable({
   providedIn: 'root'

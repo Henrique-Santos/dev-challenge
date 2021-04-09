@@ -4,10 +4,10 @@
 </app-pesquisa>
 
 <div class="container">
-  <table class="table table-borderless">
+  <table class="table table-borderless border">
     <thead class="border">
       <tr>
-        <th colspan="1" scope="col">Pedidos de Venda</th>
+        <th colspan="1" scope="col"><h4>Pedidos de Venda</h4></th>
         <td colspan="3" class="found-item">({{ salesOrders.length }} itens)</td>
       </tr>
     </thead>
@@ -15,7 +15,7 @@
       <tr>
         <th class="id-style" scope="row">#{{ salesOrder.SalesOrderID }}</th>
         <td>{{ salesOrder.MaterialName }}</td>
-        <td>Qtd: {{ salesOrder.Quantity }} pç</td>
+        <td class="border-right">Qtd: {{ salesOrder.Quantity }} pç</td>
       </tr>
     </tbody>
   </table>

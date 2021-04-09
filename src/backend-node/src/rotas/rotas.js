@@ -5,9 +5,9 @@ const pedidosCompra = require('./pedidos-compra-rotas')
 const pedidosVenda = require('./pedidos-venda-rotas')
 
 module.exports = (app) => {
-    equipamentos(app);
-    maoDeObra(app);
-    materiais(app);
-    pedidosCompra(app);
-    pedidosVenda(app);
+    equipamentos(app)
+    maoDeObra(app)
+    materiais(app)
+    pedidosCompra(app)
+    pedidosVenda(app)
 }

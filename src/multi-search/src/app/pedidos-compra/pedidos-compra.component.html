@@ -1,8 +1,8 @@
 <div class="container">
-  <table class="table table-borderless">
+  <table class="table table-borderless border">
     <thead class="border">
       <tr>
-        <th colspan="1" scope="col">Pedidos de Compra</th>
+        <th colspan="1" scope="col"><h4>Pedidos de Compra</h4></th>
         <td colspan="3" class="found-item">({{ purchaseOrders.length }} itens)</td>
       </tr>
     </thead>
@@ -10,7 +10,7 @@
       <tr>
         <th class="id-style" scope="row">#{{ purchaseOrder.PurchaseOrderID }}</th>
         <td>{{ purchaseOrder.MaterialName }}</td>
-        <td>Qtd: {{ purchaseOrder.Quantity }} pç</td>
+        <td class="border-right">Qtd: {{ purchaseOrder.Quantity }} pç</td>
       </tr>
     </tbody>
   </table>

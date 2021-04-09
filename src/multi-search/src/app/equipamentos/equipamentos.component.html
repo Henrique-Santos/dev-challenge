@@ -1,15 +1,15 @@
 <div class="container">
-  <table class="table table-borderless">
+  <table class="table table-borderless border">
     <thead class="border">
       <tr>
-        <th colspan="1" scope="col">Equipamentos</th>
+        <th colspan="1" scope="col"><h4>Equipamentos</h4></th>
         <td colspan="3" class="found-item">({{ equipments.length }} itens)</td>
       </tr>
     </thead>
     <tbody *ngFor="let equipment of equipments | filtrarEquipamentos: equipmentsSearch">
       <tr>
         <th class="id-style" scope="row">#{{ equipment.EquipmentID }}</th>
-        <td colspan="3">{{ equipment.EquipmentName }}</td>
+        <td class="border-right" colspan="3">{{ equipment.EquipmentName }}</td>
       </tr>
     </tbody>
   </table>

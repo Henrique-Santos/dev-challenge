@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { MaoDeObra } from './mao-de-obra';
 
-const URL = 'http://localhost:3001/workforce'
+const URL = 'http://localhost:3002/workforce'
 
 @Injectable({
   providedIn: 'root'

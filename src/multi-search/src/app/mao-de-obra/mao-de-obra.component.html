@@ -1,8 +1,8 @@
 <div class="container">
-  <table class="table table-borderless">
+  <table class="table table-borderless border">
     <thead class="border">
       <tr>
-        <th colspan="1" scope="col">Mão de obra</th>
+        <th colspan="1" scope="col"><h4>Mão de obra</h4></th>
         <td colspan="3" class="found-item">({{ workforces.length }} itens)</td>
       </tr>
     </thead>
@@ -10,7 +10,7 @@
       <tr>
         <th class="id-style" scope="row">#{{ workforce.WorkforceID }}</th>
         <td>{{ workforce.Name }}</td>
-        <td>{{ workforce.Shift }}</td>
+        <td class="border-right">{{ workforce.Shift }}</td>
       </tr>
     </tbody>
   </table>

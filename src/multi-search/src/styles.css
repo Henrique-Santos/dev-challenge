@@ -8,6 +8,10 @@
     border: solid 1px;
 }
 
+.border-right {
+    border-right: solid 1px;
+}
+
 .found-item {
     color: rgb(180, 174, 174);
     text-align: right;

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { Materiais } from './materiais';
 
-const URL = 'http://localhost:3001/materials'
+const URL = 'http://localhost:3002/materials'
 
 @Injectable({
   providedIn: 'root'
